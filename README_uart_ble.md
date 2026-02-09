@@ -98,8 +98,11 @@ The UART-TTL (labeled as `RS485`) socket of the BMS can be attached to any UART 
 You can install this component with [ESPHome external components feature](https://esphome.io/components/external_components.html) like this:
 ```yaml
 external_components:
-  - source: github://syssi/esphome-jk-bms@main
+  - source: github://nicakp/esphome-jk-bms@fix-test
+    refresh: 0s
 ```
+
+Replace `fix-test` with `main` for the stable version, or use `fix-test` to test the latest updates before they are merged to main.
 
 or just use the `esp32-example.yaml` as proof of concept:
 

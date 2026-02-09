@@ -2,7 +2,7 @@ substitutions:
   esp_name: jk-bms
   bms_name: ble-bms0
   device_description: "Monitor and control a JK-BMS via bluetooth"
-  external_components_source: github://txubelaxu/esphome-jk-bms@main
+  external_components_source: github://nicakp/esphome-jk-bms@fix-test
   mac_address: !secret mac_ble_battery_number_001
   # Defaults to "JK02" (hardware version >= 6.0 and < 11.0)
   # Please use "JK02_32S" if you own a new JK-BMS >= hardware version 11.0 (f.e. JK-B2A8S20P hw 11.XW, sw 11.26)
