@@ -1,7 +1,7 @@
 substitutions:
   name: jk-bms
   device_description: "Monitor a JK-BMS via UART-TTL and control via BLE"
-  external_components_source: github://syssi/esphome-jk-bms@main
+  external_components_source: github://nicakp/esphome-jk-bms@fix-test
 
   # BLE settings
   mac_address: C8:47:8C:E1:E2:AA
