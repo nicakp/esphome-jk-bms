@@ -969,8 +969,8 @@ void JkRS485Bms::decode_jk02_cell_info_(const std::vector<uint8_t> &data) {
   this->publish_state_(this->battery_capacity_total_charging_cycle_sensor_, uint32_to_float(&data[154+offset])*0.001f); //  (float) jk_get_32bit(154 + offset) * 0.001f);
 
   // 158 [184=158+26]  1   0x64                   SOCSOH
-  temp_param_value=uint32_to_float(&data[158+offset]);
-  // ESP_LOGV(TAG, "SOCSOH: 0x%02X (always 0x64?) %f", data[158 + offset],temp_param_value);
+  temp_param_value = static_cast<float>(data[158 + offset]);
+  // ESP_LOGV(TAG, "SOCSOH: 0x%02X %f", data[158 + offset], temp_param_value);
   this->publish_state_(this->battery_soh_valuation_sensor_, temp_param_value);
 
 
