@@ -970,8 +970,8 @@ void JkRS485Bms::decode_jk02_cell_info_(const std::vector<uint8_t> &data) {
 
   // 158 [184=158+26]  1   0x64                   SOCSOH
   temp_param_value=uint32_to_float(&data[158+offset]);
-  //ESP_LOGV(TAG, "SOCSOH: 0x%02X (always 0x64?) %f", data[158 + offset],temp_param_value);
-  this->publish_state_(this->battery_soh_valuation_sensor_, temp_param_value); //  (float) jk_get_32bit(158 + offset));
+  // ESP_LOGV(TAG, "SOCSOH: 0x%02X (always 0x64?) %f", data[158 + offset],temp_param_value);
+  this->publish_state_(this->battery_soh_valuation_sensor_, temp_param_value);
 
 
   // 159  [185=159+26]  1   0x00                   Precharge
